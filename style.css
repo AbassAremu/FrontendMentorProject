@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Hanken Grotesk;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.resultContainer{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+    max-width: 34rem;
+    box-shadow: 10px 10px 30px hsl(221, 100%, 96%);
+}
+
+.bluePart{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.mainContainer .resultContainer .bluePart .head {
+    opacity: 0.6;
+    color: white;
+    padding-top: 2rem;
+}
+
+.mainContainer .resultContainer .bluePart .resultDiv {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.mainContainer .resultContainer .bluePart .resultDiv h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.mainContainer .resultContainer .bluePart .resultDiv p{
+    opacity: 0.5;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.mainContainer .resultContainer .bluePart p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.mainContainer .resultContainer .bluePart h4 {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    opacity: 0.5;
+    max-width: 65%;
+    padding-bottom: 2rem;
+}
+
+.mainContainer .resultContainer .whitePart {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-content: center;
+    padding: 2rem;
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters .reactionScore {
+    display: flex;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    background-color: hsl(0, 100%, 67%, 0.1);
+    justify-content: space-between;
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters .reactionScore .score {
+    display: flex;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .reactionScore .reactionTitle{
+    display: flex;
+    gap: 0.3rem;
+    color: hsl(0, 100%, 67%);
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters .memoryScore .memoryTitle{
+    display: flex;
+    gap: 0.3rem;
+    color: hsl(39, 100%, 56%);
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .verbalScore .verbalTitle{
+    display: flex;
+    gap: 0.3rem;
+    color: hsl(166, 100%, 37%);
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .visualScore .visualTitle{
+    display: flex;
+    gap: 0.3rem;
+    color: hsl(234, 85%, 45%);
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters .memoryScore {
+    display: flex;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    background-color: hsl(39, 100%, 56%, 0.1);
+    justify-content: space-between;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .verbalScore {
+    display: flex;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    background-color: hsl(166, 100%, 37%, 0.1);
+    justify-content: space-between;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .visualScore {
+    display: flex;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    background-color: hsl(234, 85%, 45%, 0.1);
+    justify-content: space-between;
+}
+
+.mainContainer .resultContainer .whitePart .ScoreParameters .reactionScore span {
+    opacity: 0.4;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .memoryScore span {
+    opacity: 0.4;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .verbalScore span {
+    opacity: 0.4;
+}
+.mainContainer .resultContainer .whitePart .ScoreParameters .visualScore span {
+    opacity: 0.4;
+}
+
+.mainContainer .resultContainer .whitePart .continueButton {
+    text-align: center;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    padding: 1rem;
+    border-radius: 1.8rem;
+}
+
+@media screen and (max-width: 650px) {
+    .mainContainer {
+        align-items: start;
+        width: 100%;
+        height: 100%;
+    }
+    .mainContainer .resultContainer {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mainContainer .resultContainer .bluePart{
+        min-width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .mainContainer .resultContainer .whitePart {
+        min-width: 100%;
+        height: 100%;
+    }
+}
